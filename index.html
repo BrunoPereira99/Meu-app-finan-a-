@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meu Controle Financeiro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <h1>Meu Controle Financeiro</h1>
+    <p>Saldo: <span id="saldo">R$ 0,00</span></p>
+    <button onclick="mostrarFormulario()">Adicionar Movimentação</button>
+    <div id="formulario" style="display: none;">
+      <input type="date" id="data" />
+      <input type="text" id="descricao" placeholder="Descrição" />
+      <input type="number" id="valor" placeholder="Valor" />
+      <select id="tipo">
+        <option value="entrada">Entrada</option>
+        <option value="saida">Saída</option>
+      </select>
+      <button onclick="adicionarMovimentacao()">Salvar</button>
+    </div>
+    <h2>Últimas Movimentações</h2>
+    <ul id="lista-movimentacoes"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
